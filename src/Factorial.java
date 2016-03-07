@@ -6,22 +6,12 @@ import java.util.Scanner;
 public class Factorial {
 
     public static void main(String args[]){
-        //Recursion factorial
-        int n = 0;
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter a value : ");
-        n = scanner.nextInt();
-
-        System.out.println("Factorial of the number " + n + " is "+calcFactorial(n));
-    }
-
-    public static int calcFactorial(int n){
-
-        if(n == 0)
+        CalculateFactorial fact = new CalculateFactorial();
+        for(long i=1; i<21; i++)
         {
-            return 1;
-        }else
-            return n * calcFactorial(n-1);
+            System.out.println("Factorial of the number " + i + " is "+fact.calcFactorial(i));
+        }
+
     }
+
 }
